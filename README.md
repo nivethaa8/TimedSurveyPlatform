@@ -1,4 +1,4 @@
-# COMP229 Group Project - The Localhosts
+# The Localhosts
 
 
 please use **`npm install`** to install project dependencies
