@@ -1,0 +1,41 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 whiteBackground">
+          <h3 class="pageHeading"><%= title %></h3>
+          <h4><%= survey.Answers.length %> Submissions</h4>
+              <div class="table-responsive" id="results">
+                <table class="table table-bordered table-striped table-hover" id="tblData">
+                  <thead>
+                    <tr>
+                      <% for (let i = 0; i < survey.QuestionList.length; i++) { %>
+                        <th class="text-center"><%=survey.QuestionList[i]%></th>
+                      <% } %>               
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Template Row -->
+                    <% for (let a = 0; a < survey.Answers.length; a++) {%>
+                    <tr>
+                      <% for (let b = 0; b < survey.Answers[a].length; b++) { %>
+                        <td class="text-center"><%=survey.Answers[a][b]%></td>
+                      <% } %>
+                    </tr>
+                    <% } %>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div class="text-right">
+              <button class="greenButton" onclick="window.print()">Print Results</button>
+              <!-- <a class="greenButton" href="emailCurrentPage()">Email Results</a> -->
+              <button class="greenButton" onclick="exportResultsToExcel('tblData')">Export to Excel</button>
+              <a href="/surveys" class="cancelButton"><i class="fa fa-undo"></i> Back to survey list</a>
+              </div>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>

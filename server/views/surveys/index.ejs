@@ -1,0 +1,83 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10 whiteBackground">
+          <h3 class="pageHeading"> Surveys List </h3>
+          <% if(title == "My Surveys") { %>
+            <a href="/surveys/add" class="blueButton"><i class="fa fa-plus"></i> Add a survey</a>
+            
+            <br>
+            <br>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th class="text-center"></th>
+                    <th class="text-center">Survey Name</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>               
+                  </tr>
+                </thead>
+          <%}else{%>          
+          <br>
+          <br>
+          <div class="table-responsive">
+            <!--table table-bordered table-striped table-hover-->
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center"></th>
+                  <th class="text-center">Survey Name</th>
+                                  
+                </tr>
+              </thead>
+          <%}%>
+              <tbody>
+              <!-- Template Row -->
+                <% for (let count = 0; count < surveys.length; count++) { %>
+                  <% if(title == "My Surveys") { %>
+                    <tr>
+                      <td class="text-center"><%= surveys[count].Title %></td>
+
+                      <td class="text-center">
+                        <a href="/surveys/results/<%= surveys[count]._id %>" class="blueButton">
+                          <i class="fas fa-trash-alt"></i> View Results</a>
+                      </td>
+                      
+                      <td class="text-center">
+                        <a href="/surveys/edit/<%= surveys[count]._id %>" class="blueButton">
+                          <i class="fas fa-pencil-alt"></i> Edit</a>
+                      </td>
+                      
+                      <td class="text-center">
+                        <a href="/surveys/delete/<%= surveys[count]._id %>" class="redButton">
+                          <i class="fas fa-trash-alt"></i> Delete</a>
+                      </td>
+                    
+                  <%}else{%>
+                    <tr>
+                      <td class="text-center">
+                        <a href="/surveys/view/<%= surveys[count]._id %>" class="greenButton">
+                          <i class="fas fa-pencil-alt"></i> Take Survey</a>
+                      </td>
+                      <td class="text-center"><%= surveys[count].Title %></td>
+                    </tr>
+                  <%}%>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+          </div>
+           <div class="col-md-offset-1 col-md-10 text-center">
+            <ul class="pagination pagination-lg pager" id="myPager"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>
+
+

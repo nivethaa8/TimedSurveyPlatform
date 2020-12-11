@@ -1,0 +1,55 @@
+<%- include ../partials/header.ejs %>
+
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6 whiteBackground">
+            <h3 class="pageHeading"><%= title %></h3>
+
+            <form class="form" method="POST">
+
+                <input type="hidden" name="questionNum" value="<%=questionNum%>">
+                <div class="form-group">
+                    <label for="nameTextField" class="darkLabel">Survey Title</label>
+                    <input type="text" class="form-control"
+                    id="titleTextField"
+                    placeholder="Enter the title of the survey"
+                    name="Title" required>
+                </div>
+                
+                <% for(var i = 0; i < questionNum; i++) {%>
+
+                <div class="form-group">
+                    <label for="<%=i+1%>TextArea" class="darkLabel">Question <%=i+1%></label>
+                    <textarea type="text" class="form-control"
+                    id="<%=i+1%>TextArea"
+                    placeholder="Enter question <%=i+1%> of the survey"
+                    name="Question<%=i+1%>" required></textarea>
+                </div>
+                
+                <% } %>
+
+                <div class="form-group">
+                    <label for="ExpiryDate" class="darkLabel">Expiry Date:</label>
+                    <input type="date" id="eDate" name="ExpiryDate"> 
+                </div>
+
+                <button class="greenButton" type="submit" formaction="newquestion">
+                    Add Question</button>
+
+        
+                <button class="greenButton" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/surveys" class="cancelButton">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include ../partials/footer.ejs %>

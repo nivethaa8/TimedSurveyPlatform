@@ -1,0 +1,151 @@
+/* Custom CSS goes here */
+body {
+  padding-bottom: 70px;
+  background-color: #B2A9B1;
+}
+
+.whiteBackground{
+  background-color: white;
+  padding: 40px 40px;
+}
+
+.centerIt{
+  text-align: center;
+}
+
+/* Home Page Heading */
+.greyHeading{
+  background-color: #333333;
+  color: #70D6FF;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Home Buttons */
+.homeButton{
+  background-color: #BAF2BB;
+  border: none;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 50%;
+  margin-left: 25%;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+}
+.homeButton:hover {
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(194, 194, 194, 0.24), 
+  0 4px 6px 0 rgba(194, 194, 194, 0.19);
+}
+
+/* Blue Page Headings */
+.pageHeading{
+  background-color: #5C7ED6;
+  color: #333333;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Dark Buttons */
+.cancelButton{
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.cancelButton:hover {
+  color: #70D6FF;
+  box-shadow: 0 2px 4px 0 rgba(194, 194, 194, 0.24), 
+  0 4px 6px 0 rgba(194, 194, 194, 0.19);
+}
+
+/* Green Buttons */
+.greenButton{
+  background-color: #BAF2BB;
+  border: none;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  font-weight: bold;
+  /*margin-top: 10px;*/
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+}
+.greenButton:hover {
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(194, 194, 194, 0.24), 
+  0 4px 6px 0 rgba(194, 194, 194, 0.19);
+}
+
+/* Light Blue Buttons */
+.blueButton{
+  background-color: #70D6FF;
+  border: none;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+}
+.blueButton:hover {
+  color: white;
+  box-shadow: 0 2px 4px 0 rgba(194, 194, 194, 0.24), 
+  0 4px 6px 0 rgba(194, 194, 194, 0.19);
+}
+
+/* Red Buttons */
+.redButton{
+  background-color: #c92121;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 20px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+}
+.redButton:hover {
+  color: rgb(238, 255, 0);
+  box-shadow: 0 2px 4px 0 rgba(194, 194, 194, 0.24), 
+  0 4px 6px 0 rgba(194, 194, 194, 0.19);
+}
+
+/* Dark Labels */
+.darkLabel{
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* Tables */
+table, th, td{
+  border: none
+}
+
+/* Footer Text */
+.footerText{
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}

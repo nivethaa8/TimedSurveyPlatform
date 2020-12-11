@@ -1,0 +1,34 @@
+<% include ../partials/header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 whiteBackground">
+          <h3 class="pageHeading"><%= title %></h3>
+            <form class="form" method="POST">
+              
+              <input type="hidden" name="questionNum" value="<%=questionNum%>">
+              <div class="form-group">
+                <h3><%= survey.Title %></h3>
+              </div>
+              <% for(var i = 0; i < questionNum; i++) {%>
+
+                <div class="form-group">
+                    <label for="<%=i+1%>TextArea" class="darkLabel">Question <%=i+1%></label>
+                    <p><%= survey.QuestionList[i] %></p>
+                    <textarea type="text" class="form-control"
+                    id="<%=i+1%>TextArea"
+                    placeholder="Enter question <%=i+1%> of the survey"
+                    name="Answer<%=i+1%>" required></textarea>
+                </div>
+                
+                <% } %>
+             
+              <button type="submit" class="greenButton"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/surveys" class="cancelButton"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.ejs %>

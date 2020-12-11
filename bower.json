@@ -1,0 +1,28 @@
+{
+  "name": "COMP229 Group Project",
+  "description": "## We are the Localhosts! Ready to serve you",
+  "main": "server.js",
+  "authors": [
+    "Luke Nguyen, Michael Courneya, Chloe Baker, Niv Nesarajah, Edgar Meija Razo,"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "EJS"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/Scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
